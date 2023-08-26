@@ -8,4 +8,4 @@ before_install:
 install:
   - mvn clean package
   - mvn install -Dmaven.javadoc.skip=true -DskipTests
-  - ./gradlew publishReleasePublicationToMavenLocal
+  - ./gradlew clean install -xtest
