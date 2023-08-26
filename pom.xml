@@ -59,6 +59,12 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
+                <configuration>
+                    <excludes>
+                        <exclude>src/main/cpp/oboe/apps</exclude>
+                        <exclude>src/main/cpp/oboe/samples</exclude>
+                    </excludes>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -71,6 +77,7 @@
                     <classesDirectory>src</classesDirectory>
                     <excludes>
                         <exclude>src/main/cpp/oboe/apps</exclude>
+                        <exclude>src/main/cpp/oboe/samples</exclude>
                     </excludes>
                 </configuration>
             </plugin>
