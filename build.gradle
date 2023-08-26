@@ -1,14 +1,16 @@
-buildscript {
+/*buildscript {
     repositories {
+        google()
         mavenCentral()
+        gradlePluginPortal()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.1.0'
     }
-}
+}*/
 
 plugins {
-    id 'com.android.library' version '7.3.0' apply true
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
