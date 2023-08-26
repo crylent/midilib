@@ -1,10 +1,7 @@
 jdk:
   - openjdk20
 before_install:
-  - sdk install java 20.0.2
-  - sdk use java 20.0.2
   - sdk install maven
   - yes | sdkmanager "cmake;3.22.1"
 install:
   - mvn install
-  - ./gradlew build publishToMavenLocal
