@@ -1,0 +1,6 @@
+[submodule "src/main/cpp/libsamplerate"]
+	path = src/main/cpp/libsamplerate
+	url = https://github.com/libsndfile/libsamplerate
+[submodule "src/main/cpp/oboe"]
+	path = src/main/cpp/oboe
+	url = https://github.com/google/oboe
