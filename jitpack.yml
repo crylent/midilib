@@ -1,6 +1,7 @@
 jdk:
   - openjdk20
 before_install:
+  - sdk update
   - yes | sdkmanager "cmake;3.22.1"
 install:
-  - mvn install -DgroupId=com.crylent -DartefactId=midilib -Dpackagind=jar
+  - mvn install
