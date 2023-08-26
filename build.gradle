@@ -1,17 +1,20 @@
 plugins {
     id 'com.android.library' version '7.3.0' apply true
     id 'org.jetbrains.kotlin.android' version '1.8.21' apply true
+    id 'maven-publish'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.crylent'
+            artifactId = 'midilib'
+            version = '1.0'
+        }
+    }
 }
 
 android {
-    /*signingConfigs {
-        release {
-            storeFile file(findProperty("SigningConfig_storeFile"))
-            storePassword findProperty("SigningConfig_storePassword")
-            keyAlias findProperty("SigningConfig_keyAlias")
-            keyPassword findProperty("SigningConfig_keyPassword")
-        }
-    }*/
     namespace 'com.crylent.midilib'
     compileSdkVersion 33
 
@@ -26,7 +29,6 @@ android {
                 cppFlags "-std=c++20 -fexceptions"
             }
         }
-        //signingConfig signingConfigs.release
     }
 
     buildTypes {
