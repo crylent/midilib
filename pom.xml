@@ -70,7 +70,7 @@
                 <configuration>
                     <classesDirectory>src</classesDirectory>
                     <excludes>
-                        <exclude>main/cpp/oboe/apps</exclude>
+                        <exclude>src/main/cpp/oboe/apps</exclude>
                     </excludes>
                 </configuration>
             </plugin>
