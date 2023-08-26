@@ -31,13 +31,6 @@
             <version>${kotlin.version}</version>
         </dependency>
 
-        <!-- Android -->
-        <dependency>
-            <groupId>com.android</groupId>
-            <artifactId>library</artifactId>
-            <version>7.3.0</version>
-        </dependency>
-
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>android</artifactId>
