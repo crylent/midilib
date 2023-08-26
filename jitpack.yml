@@ -1,6 +1,6 @@
 jdk:
-  - oraclejdk20
+  - openjdk20
 before_install:
   - yes | sdkmanager "cmake;3.22.1"
 install:
-  - mvn install
+  - mvn install -DgroupId=com.crylent -DartefactId=midilib -Dpackagind=jar
