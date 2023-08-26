@@ -6,6 +6,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10"
+        //classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 
@@ -15,12 +16,25 @@ plugins {
     id 'maven-publish'
 }
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = 'com.crylent'
-            artifactId = 'midilib'
-            version = '1.0'
+android {
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                components.getByName('release')
+
+                groupId = 'com.crylent'
+                artifactId = 'midilib'
+                version = 'v1.0'
+            }
         }
     }
 }
