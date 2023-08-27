@@ -21,10 +21,6 @@ android {
             withSourcesJar()
             withJavadocJar()
         }
-        singleVariant('debug') {
-            withSourcesJar()
-            withJavadocJar()
-        }
     }
 }
 
@@ -33,14 +29,6 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 components.getByName('release')
-
-                groupId = 'com.crylent'
-                artifactId = 'midilib'
-                version = 'v1.0'
-            }
-
-            debug(MavenPublication) {
-                components.getByName('debug')
 
                 groupId = 'com.crylent'
                 artifactId = 'midilib'
