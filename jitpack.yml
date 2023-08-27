@@ -2,3 +2,5 @@ before_install:
   - yes | sdkmanager "cmake;3.22.1"
   - sdk install java 17.0.1-zulu
   - sdk use java 17.0.1-zulu
+install:
+  - mvn install
