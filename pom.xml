@@ -17,15 +17,11 @@
     </licenses>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>1.8.21</kotlin.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <build>
-        <sourceDirectory>src/main</sourceDirectory>
-        <testSourceDirectory>src/test</testSourceDirectory>
 
         <plugins>
 
@@ -40,12 +36,6 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
-                <configuration>
-                    <excludes>
-                        <exclude>src/main/cpp/oboe/apps</exclude>
-                        <exclude>src/main/cpp/oboe/samples</exclude>
-                    </excludes>
-                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -56,10 +46,6 @@
                 <version>3.3.0</version>
                 <configuration>
                     <classesDirectory>src</classesDirectory>
-                    <excludes>
-                        <exclude>src/main/cpp/oboe/apps</exclude>
-                        <exclude>src/main/cpp/oboe/samples</exclude>
-                    </excludes>
                 </configuration>
             </plugin>
             <plugin>
