@@ -1,7 +1,6 @@
 jdk:
   - openjdk20
 before_install:
-  - sdk update
   - yes | sdkmanager "cmake;3.22.1"
 install:
   - mvn install
