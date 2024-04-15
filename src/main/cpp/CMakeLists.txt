@@ -104,3 +104,9 @@ set (LIBSR_DIR ${PROJECT_SOURCE_DIR}/libsamplerate)
 add_subdirectory(${LIBSR_DIR} ./libsamplerate)
 include_directories(${LIBSR_DIR}/include)
 target_link_libraries(midilib samplerate)
+
+# Include DSPFilters
+set (FILTERS_DIR ${PROJECT_SOURCE_DIR}/DSPFilters/shared/DSPFilters)
+add_subdirectory(${FILTERS_DIR} ./DSPFilters)
+include_directories(${FILTERS_DIR}/include)
+link_directories(${FILTERS_DIR}/source)

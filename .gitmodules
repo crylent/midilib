@@ -4,3 +4,6 @@
 [submodule "src/main/cpp/oboe"]
 	path = src/main/cpp/oboe
 	url = https://github.com/google/oboe
+[submodule "src/main/cpp/DSPFilters"]
+	path = src/main/cpp/DSPFilters
+	url = https://github.com/vinniefalco/DSPFilters
